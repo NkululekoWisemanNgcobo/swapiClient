@@ -6,15 +6,16 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 import { Link } from "react-router-dom";
 
 
-const CardComponent = ({ name, gender }) => {
+const CardComponent = ({ name }) => {
+
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
                     height="140"
-                    image="assets/image.jpeg"
-                    alt="green iguana"
+                    image="../assets/image.jpeg"
+                    alt="Grogu"
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
@@ -24,7 +25,7 @@ const CardComponent = ({ name, gender }) => {
             </CardActionArea>
             <CardActions>
                 <Button size="small" color="primary">
-                    <Link to={`person/${name}`}>
+                    <Link to={`/person/${name}`} replace={true}>
                         More Details
                     </Link>
                 </Button>

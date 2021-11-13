@@ -66,7 +66,7 @@ const CharacterDetails = () => {
                                 return (<li key={index}>
                                     <ul>
                                         {Object.keys(person).map(function (key, index) {
-                                            if (key == "__typename")
+                                            if (key === "__typename")
                                                 return "";
                                             return (
                                                 <ListItem key={index}>
